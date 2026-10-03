@@ -1,0 +1,10 @@
+{
+  "name": "ROS 2 Jazzy",
+  "build": { "dockerfile": "../Dockerfile" },
+  "runArgs": ["--network=host", "--ipc=host"],
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
