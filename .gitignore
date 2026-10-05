@@ -10,3 +10,7 @@ ros2_ws/log/
 
 # CMake のビルド
 cmake_hello/build/
+
+# Docker Compose で共有するディレクトリ
+docker/work/
+docker_ros/ros2_ws/

@@ -10,3 +10,7 @@ def valid_average(distances: list[float]) -> float | None:
     if len(valid) == 0:
         return None
     return sum(valid) / len(valid)
+
+
+print(wheel_speed(2.0))
+print(valid_average([1.2, -1.0, 0.8]))

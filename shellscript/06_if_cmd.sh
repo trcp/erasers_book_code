@@ -1,3 +1,3 @@
-if grep -q "setup.bash" ~/.bashrc; then
-    echo "ROS 2 の設定はすでにあります"
+if grep -q "EDITOR" ~/.bashrc; then
+    echo "EDITOR の設定はすでにあります"
 fi

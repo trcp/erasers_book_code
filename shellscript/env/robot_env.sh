@@ -1,2 +1,2 @@
 export ROBOT_NAME=turtle
-export ROS_DOMAIN_ID=10
+export ROBOT_SPEED=0.5

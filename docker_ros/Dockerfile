@@ -1,14 +1,13 @@
-# 元にするイメージ（Ubuntu 24.04 の公式イメージ）
-FROM ubuntu:24.04
+# 元にするイメージ（ROS 2 Jazzy の公式イメージ）
+FROM ros:jazzy
 
 # 追加のパッケージをインストールする
 RUN apt-get update && apt-get install -y \
-    python3 \
-    x11-apps \
+    ros-jazzy-turtlesim \
     && rm -rf /var/lib/apt/lists/*
 
-# 作業ディレクトリ
-WORKDIR /root/work
+# 作業ディレクトリ（ROS 2 のワークスペース）
+WORKDIR /root/ros2_ws
 
 # コンテナを起動したときに実行するコマンド
 CMD ["bash"]

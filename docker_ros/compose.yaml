@@ -1,11 +1,13 @@
 services:
-  tools:
+  ros:
     build: .                     # 同じディレクトリの Dockerfile からイメージを作る
-    image: my_tools
+    image: my_ros:jazzy
     network_mode: host
+    ipc: host
     environment:
       - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-      - ./work:/root/work        # ホストの work ディレクトリを共有する
+      - ./ros2_ws/src:/root/ros2_ws/src   # 自分のパッケージを共有する
     tty: true
